@@ -1,0 +1,20 @@
+<html>
+<div id ="issues" style="max-width: 50%;">
+    <div class="container">  
+        <!-- write logic to ngFor Directive to display all issues-->
+    <div class="row" *ngFor="let issue of recomend" >
+      <div class="column">
+        <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title" style="background-color: cornflowerblue;">{{issue.name }}</h4>
+                     </div>
+                     <!-- write logic to call deleteIssue method by passing issue id on click of button -->
+                <button (onclick)="view(issue.name)" style="align-self: center;background-color: crimson;" class="btn-success" >view </button>
+                </div>
+            <div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</html>

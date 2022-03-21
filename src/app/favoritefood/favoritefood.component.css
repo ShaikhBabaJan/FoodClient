@@ -1,0 +1,11 @@
+html{
+    color: blanchedalmond;
+    background-image: url(./p3.jfif);
+    background-repeat: no-repeat;
+    height: 180vh;
+    background-size: cover;
+    align-self: center;
+}
+.table{
+    margin-left:10%;
+}

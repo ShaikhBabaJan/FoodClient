@@ -1,0 +1,50 @@
+<p style="color: green;">hey!! welcome u have logged in successfully!!</p>
+<html>
+<div id = "login"  >
+  <div class="align">
+    <div class="container" >
+        <form [formGroup]="form" (ngSubmit)="onSubmit();clearForm()" >
+  
+        
+          
+       <div class="search"> 
+            <input class="id" style="padding-left: 20%;border-radius: 2rem;left: 50%;text-align: center;" formControlName="search" type="text"  placeholder="Enter your input"[ngClass]="{ 'is-invalid': submitted && f.search.errors }">
+            <input   class="btn btn-primary" type="submit" value="search">
+    </div>
+        </form>
+       
+  </div>
+  </div>
+  </div>
+  
+
+
+<div *ngIf="reset()" class="centre">
+   
+<table  class="table table-striped" style="max-width: 40%;">
+    <thead>
+      <tr>
+         <th style="color: white;" scope="col">food-item</th>
+        <th style="color: white;" scope="col">Nutrition</th>
+        <th style="color: white;" scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color: white;" *ngFor="let issue of datatemp; let i=index;">
+          <td *ngIf="i==0"><b>{{issue.food}}</b></td>
+          <td *ngIf="i!=0">  </td>
+        <td><b>{{issue.nutrition}}</b></td>
+        <td><b>{{issue.value}}</b></td>
+     
+    </tbody>
+  </table>
+
+  <button class="btn btn-success" (click)="addtofav(message)" >add to Fav! </button>
+</div>
+
+    
+  </html>
+
+    
+    
+    

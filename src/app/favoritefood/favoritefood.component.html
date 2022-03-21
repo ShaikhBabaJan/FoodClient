@@ -1,0 +1,43 @@
+<html>
+  <div class="table">
+<table   class="table table-striped" style=" max-width: 50%;">
+    <thead>
+      <tr>
+        <th scope="col">Favorite food-item</th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let issue of issues;" >
+          <td><b>>{{issue.name}}</b></td>
+        <td><button (click)="view(issue.name)" class="btn btn-success" >veiw-nutrition </button></td>
+        <td><button (click)="delete(issue.id)" class="btn btn-danger" >Remove </button></td>
+     
+    </tbody>
+  </table>
+
+  <div *ngIf="reset()" class="centre">
+   
+    <table   class="table table-striped" style="max-width: 40%;">
+        <thead>
+          <tr>
+            <th scope="col">food-item</th>
+            <th scope="col">Nutrition</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let issue of datatemp; let i=index;">
+              <td *ngIf="i==0"><b>{{issue.food}}</b></td>
+              <td *ngIf="i!=0">  </td>
+            <td><b>{{issue.nutrition}}</b></td>
+            <td><b>{{issue.value}}</b></td>
+         
+        </tbody>
+      </table>
+    
+      <button style="margin-left: 40%;" class="btn btn-primary" (click)="close()" >close </button>
+    </div>
+  </div>
+    </html>
